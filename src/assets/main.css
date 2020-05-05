@@ -1,6 +1,38 @@
 .w{
     margin: 0 auto;
     width: 1190px;
-    background-color: pink;
+    /* background-color: pink; */
+    box-sizing: border-box;
+    /* border: 1px solid black; */
     height: 100%;
 }
+
+a{
+    text-decoration: none;
+    color: #999;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+ul{
+    margin: 0;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }

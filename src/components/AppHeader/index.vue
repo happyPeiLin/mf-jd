@@ -1,19 +1,24 @@
 <template>
   <div class="header">
-    <div class="w">
-
-    </div>
+    <div class="w"></div>
   </div>
 </template>
 
 <script>
+export default {
+  data() {
+    return {};
+  },
+  methods: {}
+};
 </script>
 
 <style lang="scss" scoped>
-.header{
+.header {
   width: 100%;
   background-color: orange;
   height: 140px;
+  
   // border: 1px solid #ddd;
 }
 </style>
