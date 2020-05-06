@@ -380,7 +380,7 @@
           </div>
         </li>
         <li class="line"></li>
-        <li class="sjjd"  @mouseover="hoverSjjd" @mouseout="outSjjd">
+        <li class="sjjd" @mouseover="hoverSjjd" @mouseout="outSjjd">
           <a href="#">手机京东</a>
           <div class="sjjdSon" v-show="sjjd === 1">
             <img src="../../assets/sjjd.jpg" alt="#" />
@@ -392,7 +392,6 @@
 </template>
 
 <script>
-import { sjjd } from "../../assets/sjjd.jpg";
 export default {
   data() {
     return {
@@ -401,7 +400,7 @@ export default {
       qycg: 0,
       khfw: 0,
       wzdh: 0,
-      sjjd: 0,
+      sjjd: 0
     };
   },
   methods: {
@@ -435,10 +434,10 @@ export default {
     outWzdh() {
       this.wzdh = 0;
     },
-    hoverSjjd(){
+    hoverSjjd() {
       this.sjjd = 1;
     },
-    outSjjd(){
+    outSjjd() {
       this.sjjd = 0;
     }
   }
@@ -464,9 +463,12 @@ body {
     width: 70px;
     position: relative;
     .locationSon {
+      z-index: 9999999999999;
+      border: 1px solid #ccc;
+      border-top: none;
       position: absolute;
       top: 30px;
-      left: 0px;
+      left: -1px;
       background-color: white;
       width: 300px;
       height: 220px;
@@ -505,16 +507,23 @@ body {
   }
   .location:hover {
     background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
   }
   .nav {
     .sjjd:hover {
       background-color: white;
+      border-left: 1px solid #ccc;
+      padding-left: 9px;
     }
     .sjjd {
       .sjjdSon {
         position: absolute;
-        left: 0px;
-
+        left: -129px;
+        top:30px;
+        border: 1px solid #ccc;
+        border-top:none
       }
       position: relative;
       margin-left: 0px;
@@ -523,8 +532,11 @@ body {
     }
     .wzdh:hover {
       background-color: white;
+      padding-left: 9px;
+      border-left: 1px solid #ccc;
     }
     .wzdh {
+      z-index: 1000000000;
       .wzdhSon {
         .item1 {
           .title {
@@ -547,6 +559,7 @@ body {
             display: inline-block;
             font-size: 12px;
           }
+          
           border-right: 1px solid #eee;
           display: inline-block;
           height: 149px;
@@ -641,13 +654,15 @@ body {
           box-sizing: border-box;
         }
         position: absolute;
-        width: 1190px;
+        width: 1191px;
         height: 181px;
         background-color: white;
         top: 30px;
         left: -1038px;
         box-sizing: border-box;
         padding: 15px 0;
+        border: 1px solid #ccc;
+        border-top: none;
       }
       margin-left: 0px;
       padding-left: 10px;
@@ -655,16 +670,21 @@ body {
     }
     .khfw:hover {
       background-color: white;
+      border-left: 1px solid #ccc;
+      padding-left: 4px;
     }
     .khfw {
+      z-index: 1000000000;
       position: relative;
       padding-left: 5px;
       .khfwSon {
+        border: 1px solid #ccc;
+        border-top: none;
         line-height: 0px;
         padding-top: 10px;
         box-sizing: border-box;
         top: 30px;
-        left: 0px;
+        left: -1px;
         position: absolute;
         width: 180px;
         height: 249px;
@@ -701,17 +721,23 @@ body {
     }
     .qycg:hover {
       background-color: white;
+      border-left: 1px solid #ccc;
+      padding-left: 4px;
+
     }
     .qycg {
+      z-index: 1000000000;
       position: relative;
       padding-left: 5px;
       .qycgSon {
+        border: 1px solid #ccc;
+        border-top: none;
         position: absolute;
         width: 157px;
         height: 94px;
         background-color: white;
         top: 30px;
-        left: 0px;
+        left: -1px;
         padding: 15px;
         box-sizing: border-box;
         line-height: 0px;
@@ -730,16 +756,19 @@ body {
         }
       }
     }
-    height: 100%;
-    box-sizing: border-box;
     .wdjd {
       margin-left: 0;
       padding-left: 10px;
       position: relative;
+      z-index: 1000000000;
+        box-sizing: border-box;
       .wdjdSon {
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-top: none;
         position: absolute;
         top: 30px;
-        left: 0px;
+        left: -1px;
         width: 282px;
         height: 170px;
         background-color: white;
@@ -785,6 +814,8 @@ body {
     }
     .wdjd:hover {
       background-color: white;
+      border-left: 1px solid #ccc;;
+      padding-left: 9px;
     }
     li {
       margin-left: 10px;
@@ -805,5 +836,7 @@ body {
       padding-right: 10px;
     }
   }
+  height: 100%;
+  box-sizing: border-box;
 }
 </style>

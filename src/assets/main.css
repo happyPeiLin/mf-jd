@@ -1,4 +1,4 @@
-.w{
+.w {
     margin: 0 auto;
     width: 1190px;
     /* background-color: pink; */
@@ -7,24 +7,24 @@
     height: 100%;
 }
 
-a{
+a {
     text-decoration: none;
     color: #999;
 }
 
-.fl{
+.fl {
     float: left;
 }
 
-.fr{
+.fr {
     float: right;
 }
 
-ul{
+ul {
     margin: 0;
 }
 
-ul li{
+ul li {
     list-style-type: none;
     display: inline-block;
     height: 100%;
@@ -32,7 +32,29 @@ ul li{
 
 html {
     box-sizing: border-box;
-  }
-  *, *:before, *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
+}
+
+.temB {
+    border: 1px solid black;
+}
+
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
