@@ -1,17 +1,621 @@
 <template>
   <div class="main">
     <div class="w">
+      <div class="wrap">
+        <div class="mainNav">
+          <ul>
+            <li>
+              <a href="#">家用电器</a>
+              <div class="father">
+                <main-one></main-one>
+              </div>
+            </li>
+            <li>
+              <a href="#">手机</a>
+              <span>/</span>
+              <a href="#">运营商</a>
+              <span>/</span>
+              <a href="#">数码</a>
+              <div class="father">
+                <main-two></main-two>
+              </div>
+            </li>
+            <li>
+              <a href="#">电脑</a>
+              <span>/</span>
+              <a href="#">办公</a>
+              <div class="father">
+                <main-three></main-three>
+              </div>
+            </li>
+            <li>
+              <a href="#">家用电器</a>
+              <div class="father">
+                <main-one></main-one>
+              </div>
+            </li>
+            <li>
+              <a href="#">手机</a>
+              <span>/</span>
+              <a href="#">运营商</a>
+              <span>/</span>
+              <a href="#">数码</a>
+              <div class="father">
+                <main-two></main-two>
+              </div>
+            </li>
+            <li>
+              <a href="#">电脑</a>
+              <span>/</span>
+              <a href="#">办公</a>
+              <div class="father">
+                <main-three></main-three>
+              </div>
+            </li>
+            <li>
+              <a href="#">家用电器</a>
+              <div class="father">
+                <main-one></main-one>
+              </div>
+            </li>
+            <li>
+              <a href="#">手机</a>
+              <span>/</span>
+              <a href="#">运营商</a>
+              <span>/</span>
+              <a href="#">数码</a>
+              <div class="father">
+                <main-two></main-two>
+              </div>
+            </li>
+            <li>
+              <a href="#">电脑</a>
+              <span>/</span>
+              <a href="#">办公</a>
+              <div class="father">
+                <main-three></main-three>
+              </div>
+            </li>
+            <li>
+              <a href="#">家用电器</a>
+              <div class="father">
+                <main-one></main-one>
+              </div>
+            </li>
+            <li>
+              <a href="#">手机</a>
+              <span>/</span>
+              <a href="#">运营商</a>
+              <span>/</span>
+              <a href="#">数码</a>
+              <div class="father">
+                <main-two></main-two>
+              </div>
+            </li>
+            <li>
+              <a href="#">电脑</a>
+              <span>/</span>
+              <a href="#">办公</a>
+              <div class="father">
+                <main-three></main-three>
+              </div>
+            </li>
+            <li>
+              <a href="#">家用电器</a>
+              <div class="father">
+                <main-one></main-one>
+              </div>
+            </li>
+            <li>
+              <a href="#">手机</a>
+              <span>/</span>
+              <a href="#">运营商</a>
+              <span>/</span>
+              <a href="#">数码</a>
+              <div class="father">
+                <main-two></main-two>
+              </div>
+            </li>
+            <li>
+              <a href="#">电脑</a>
+              <span>/</span>
+              <a href="#">办公</a>
+              <div class="father">
+                <main-three></main-three>
+              </div>
+            </li>
+            <li>
+              <a href="#">家用电器</a>
+              <div class="father">
+                <main-one></main-one>
+              </div>
+            </li>
+            <li>
+              <a href="#">手机</a>
+              <span>/</span>
+              <a href="#">运营商</a>
+              <span>/</span>
+              <a href="#">数码</a>
+              <div class="father">
+                <main-two></main-two>
+              </div>
+            </li>
+            <li>
+              <a href="#">电脑</a>
+              <span>/</span>
+              <a href="#">办公</a>
+              <div class="father">
+                <main-three></main-three>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sliderBig">
+          <el-carousel :interval="5000" height="470px" arrow="always">
+            <el-carousel-item v-for="item in list" :key="item.img">
+              <a href="#">
+                <img :src="item.img" />
+              </a>
+            </el-carousel-item>
+          </el-carousel>
+        </div>
+      </div>
+
+      <div class="sliderSmall"></div>
+      <div class="mainRight">
+        <div class="user">
+          <a href="#" class="avatar"></a>
+          <a href="#" class="welcome">Hi~欢迎光临京东！</a>
+          <a href="#" class="login">登录 |</a>
+          <a href="#" class="reg">注册</a>
+          <a href="#" class="new">新人福利</a>
+          <a href="#" class="plus">PLUS会员</a>
+        </div>
+        <div class="news">
+          <h4>京东快报</h4>
+          <a href="#" class="more">
+            更多
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+          </a>
+          <ul class="hot">
+            <li>
+              <a href="#">
+                <span>热评</span>
+                <p>更多像污染源说不，啊手动阀第三方</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>热门</span>
+                <p>处女座福音，超续航啊手动阀示范点</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>推荐</span>
+                <p>三星CJG52显示屏评论阿斯顿发生</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>热门</span>
+                <p>信仰级显卡推荐</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="service">
+          <div>
+            <a href="#">
+              <img src="../../assets/hf.png" alt="#" />
+              <div>话费</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/jp.png" alt="#" />
+              <div>机票</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/jd.png" alt="#" />
+              <div>酒店</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/yx.png" alt="#" />
+              <div>游戏</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/jyk.png" alt="#" />
+              <div>加油卡</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/hcp.png" alt="#" />
+              <div style="left:10px">火车票</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/zc.png" alt="#" />
+              <div>众筹</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/lc.png" alt="#" />
+              <div>理财</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/bt.png" alt="#" />
+              <div>白条</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/dyp.png" alt="#" />
+              <div style="left:10px">电影票</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/qyg.png" alt="#" />
+              <div style="left:10px">企业购</div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img src="../../assets/lpk.png" alt="#" />
+              <div style="left:10px">礼品卡</div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import mainOne from "./mainOne";
+import mainTwo from "./mainTwo";
+import mainThree from "./mainThree";
+import lbbig1 from "../../assets/lbbig1.jpg";
+import lbbig2 from "../../assets/lbbig2.jpg";
+import lbbig3 from "../../assets/lbbig3.jpg";
+import lbbig4 from "../../assets/lbbig4.jpg";
+import lbbig5 from "../../assets/lbbig5.jpg";
+import lbbig6 from "../../assets/lbbig6.jpg";
+import lbbig7 from "../../assets/lbbig7.jpg";
+import lbbig8 from "../../assets/lbbig8.jpg";
+
+import s1 from "../../assets/s1.jpg";
+import s2 from "../../assets/s2.jpg";
+import s3 from "../../assets/s3.jpg";
+import s4 from "../../assets/s4.jpg";
+import s5 from "../../assets/s5.jpg";
+import s6 from "../../assets/s6.jpg";
+import s7 from "../../assets/s7.jpg";
+import s8 from "../../assets/s8.jpg";
+import s9 from "../../assets/s9.jpg";
+
+export default {
+  components: { mainOne, mainTwo, mainThree },
+  data() {
+    return {
+      list: [
+        {
+          img: lbbig1
+        },
+        {
+          img: lbbig2
+        },
+        {
+          img: lbbig3
+        },
+        {
+          img: lbbig4
+        },
+        {
+          img: lbbig5
+        },
+        {
+          img: lbbig6
+        },
+        {
+          img: lbbig7
+        },
+        {
+          img: lbbig8
+        }
+      ],
+      listSmall: [
+        {
+          img1: s1,
+          img2: s4,
+          img3: s7
+        },
+        {
+          img1: s2,
+          img2: s5,
+          img3: s8
+        },
+        {
+          img1: s3,
+          img2: s4,
+          img3: s9
+        }
+      ]
+    };
+  },
+  methods: {}
+};
 </script>
 
 <style lang="scss" scoped>
-.main{
+.main {
+  .w {
+    .service {
+      div {
+        a:hover div {
+          color: red;
+        }
+        a:hover img {
+          opacity: 1;
+        }
+        a {
+          div {
+            position: absolute;
+            top: 37px;
+            left: 15px;
+            width: 50px;
+            height: 20px;
+            font-size: 12px;
+            border: none;
+            color: #333333;
+          }
+          img {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            top: 5px;
+            left: 15px;
+            opacity: 0.7;
+          }
+        }
+
+        display: inline-block;
+        width: 63px;
+        height: 59px;
+        position: relative;
+      }
+      width: 190px;
+      height: 238px;
+      font-size: 0px;
+    }
+    .mainRight {
+      .new:hover {
+        background-color: #c81623;
+        color: white !important;
+      }
+      .plus:hover {
+        color: white !important;
+        background-color: #c81623;
+      }
+      .new {
+        display: block;
+        position: absolute;
+        top: 67px;
+        left: 16px;
+        width: 70px;
+        height: 25px;
+        background-color: red;
+        font-size: 12px;
+        line-height: 25px;
+        padding-left: 8px;
+        border-radius: 12px;
+        color: white;
+      }
+      .plus {
+        display: block;
+        position: absolute;
+        top: 67px;
+        left: 100px;
+        width: 70px;
+        height: 25px;
+        background-color: black;
+        font-size: 12px;
+        line-height: 25px;
+        padding-left: 5px;
+        border-radius: 12px;
+        color: #e5d790;
+      }
+      .news {
+        .hot {
+          li {
+            a:hover {
+              color: red;
+            }
+            a {
+              p {
+                display: inline-block;
+                font-size: 12px;
+                margin: 0;
+                width: 119px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                height: 16px;
+                line-height: 19px;
+              }
+              span {
+                padding-left: 4px;
+                background-color: rgba(225, 37, 27, 0.08);
+                color: #e1251b;
+                width: 35px;
+                height: 16px;
+                margin-right: 6px;
+                display: inline-block;
+                font-size: 12px;
+                height: 16px;
+                line-height: 17px;
+              }
+              width: 100%;
+              height: 100%;
+              display: inline-block;
+            }
+            white-space: nowrap;
+            display: inline-block;
+            height: 16px;
+            margin-bottom: 6px;
+            text-overflow: ellipsis;
+            width: 160px;
+          }
+          width: 160px;
+          height: 88px;
+          margin: 0 15px;
+          padding: 0;
+          margin-left: 10px;
+          margin-top: 5px;
+        }
+        .more:hover {
+          color: red;
+        }
+        .more {
+          display: inline-block;
+          margin-left: 60px;
+          font-size: 12px;
+        }
+        h4 {
+          margin: 15px 0 0 10px;
+          display: inline-block;
+        }
+        width: 190px;
+        height: 130px;
+      }
+      .user {
+        a:hover {
+          color: red;
+        }
+        .welcome {
+          font-size: 12px;
+          display: inline-block;
+          position: absolute;
+          top: 15px;
+          left: 70px;
+        }
+        .login {
+          font-size: 13px;
+          display: inline-block;
+          position: absolute;
+          top: 35px;
+          left: 70px;
+          color: black;
+        }
+        .reg {
+          font-size: 13px;
+          display: inline-block;
+          position: absolute;
+          top: 35px;
+          left: 108px;
+          color: black;
+        }
+        .avatar {
+          width: 44px;
+          height: 44px;
+          display: inline-block;
+          border-radius: 22px;
+          background-image: url("../../assets/avatar.jpg");
+          background-size: contain;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+          margin-top: 10px;
+          margin-left: 20px;
+        }
+        width: 190px;
+        height: 102px;
+        position: relative;
+      }
+      width: 190px;
+      height: 470px;
+      float: left;
+      margin-left: 10px;
+      background-color: white;
+    }
+    .sliderSmall {
+      width: 190px;
+      height: 470px;
+      float: left;
+      margin-left: 10px;
+      background-color: white;
+    }
+    .sliderBig {
+      width: 590px;
+      height: 470px;
+      float: left;
+      margin-left: 10px;
+    }
+    .mainNav {
+      ul {
+        li:hover div {
+          display: block;
+        }
+        li:hover {
+          background-color: #d9d9d9;
+        }
+
+        li {
+          .father {
+            margin-left: 2px;
+            z-index: 100000;
+            display: none;
+            position: absolute;
+            width: 1000px;
+            height: 470px;
+            top: 0px;
+            left: 188px;
+            background-color: white;
+            box-shadow: 3px 3px 5px #888888;
+          }
+          span {
+            font-size: 12px;
+            color: #636363;
+            padding: 0px 2px;
+          }
+          a:hover {
+            color: red;
+          }
+          a {
+            font-size: 14px;
+            color: #333333;
+          }
+          padding-left: 18px;
+          height: 25px;
+          line-height: 25px;
+          width: 190px;
+        }
+        padding: 10px 0;
+      }
+      position: relative;
+      float: left;
+      width: 190px;
+      height: 470px;
+      background-color: white;
+      border-right: 2px solid #f4f4f4;
+    }
+    position: relative;
+    top: 10px;
+    height: 470px;
+    // background-color: white;
+  }
   width: 100%;
-  background-color: grey;
-  height: 200px;
+  height: 480px;
+  background-color: #f4f4f4;
 }
 </style>

@@ -519,11 +519,12 @@ body {
     }
     .sjjd {
       .sjjdSon {
+        z-index: 100000000;
         position: absolute;
         left: -129px;
-        top:30px;
+        top: 30px;
         border: 1px solid #ccc;
-        border-top:none
+        border-top: none;
       }
       position: relative;
       margin-left: 0px;
@@ -534,6 +535,8 @@ body {
       background-color: white;
       padding-left: 9px;
       border-left: 1px solid #ccc;
+      border-bottom: none;
+      height: 31px;
     }
     .wzdh {
       z-index: 1000000000;
@@ -559,7 +562,7 @@ body {
             display: inline-block;
             font-size: 12px;
           }
-          
+
           border-right: 1px solid #eee;
           display: inline-block;
           height: 149px;
@@ -657,8 +660,8 @@ body {
         width: 1191px;
         height: 181px;
         background-color: white;
-        top: 30px;
-        left: -1038px;
+        top: 31px;
+        left: -1033px;
         box-sizing: border-box;
         padding: 15px 0;
         border: 1px solid #ccc;
@@ -723,7 +726,6 @@ body {
       background-color: white;
       border-left: 1px solid #ccc;
       padding-left: 4px;
-
     }
     .qycg {
       z-index: 1000000000;
@@ -761,7 +763,7 @@ body {
       padding-left: 10px;
       position: relative;
       z-index: 1000000000;
-        box-sizing: border-box;
+      box-sizing: border-box;
       .wdjdSon {
         box-sizing: border-box;
         border: 1px solid #ccc;
@@ -814,7 +816,7 @@ body {
     }
     .wdjd:hover {
       background-color: white;
-      border-left: 1px solid #ccc;;
+      border-left: 1px solid #ccc;
       padding-left: 9px;
     }
     li {

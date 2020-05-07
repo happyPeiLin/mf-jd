@@ -49,6 +49,7 @@ html {
 .clearfix:before {
     content: "";
     display: table;
+
 }
 
 .clearfix:after {
@@ -57,4 +58,19 @@ html {
 
 .clearfix {
     *zoom: 1;
+}
+
+
+
+/* 此项目专项css */
+
+.el-carousel__button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 5px;
+}
+
+.el-carousel__indicators--horizontal {
+    left: 90px;
+
 }
