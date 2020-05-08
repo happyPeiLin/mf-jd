@@ -74,3 +74,17 @@ html {
     left: 90px;
 
 }
+
+
+.el-carousel__arrow--left {
+    left: -15px !important;
+}
+.el-carousel__arrow--right {
+    right: -15px !important;
+}
+
+
+.el-carousel__arrow {
+    border-radius: 45%;
+    z-index: 999999999;
+}

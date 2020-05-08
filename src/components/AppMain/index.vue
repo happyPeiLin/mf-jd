@@ -1,167 +1,183 @@
 <template>
   <div class="main">
+    <div class="hider1" @mouseenter="number = 0">
+      <a href="#">
+        <img src="../../assets/backgroundL.jpg" alt="#" />
+      </a>
+      <a href="#">
+        <img src="../../assets/backgroundR.jpg" alt="#" />
+      </a>
+    </div>
+    <div class="hider2" @mouseenter="number = 1"></div>
+    <div class="hider3" @mouseenter="number = 1"></div>
     <div class="w">
       <div class="wrap">
-        <div class="mainNav">
-          <ul>
-            <li>
-              <a href="#">家用电器</a>
-              <div class="father">
-                <main-one></main-one>
-              </div>
-            </li>
-            <li>
-              <a href="#">手机</a>
-              <span>/</span>
-              <a href="#">运营商</a>
-              <span>/</span>
-              <a href="#">数码</a>
-              <div class="father">
-                <main-two></main-two>
-              </div>
-            </li>
-            <li>
-              <a href="#">电脑</a>
-              <span>/</span>
-              <a href="#">办公</a>
-              <div class="father">
-                <main-three></main-three>
-              </div>
-            </li>
-            <li>
-              <a href="#">家用电器</a>
-              <div class="father">
-                <main-one></main-one>
-              </div>
-            </li>
-            <li>
-              <a href="#">手机</a>
-              <span>/</span>
-              <a href="#">运营商</a>
-              <span>/</span>
-              <a href="#">数码</a>
-              <div class="father">
-                <main-two></main-two>
-              </div>
-            </li>
-            <li>
-              <a href="#">电脑</a>
-              <span>/</span>
-              <a href="#">办公</a>
-              <div class="father">
-                <main-three></main-three>
-              </div>
-            </li>
-            <li>
-              <a href="#">家用电器</a>
-              <div class="father">
-                <main-one></main-one>
-              </div>
-            </li>
-            <li>
-              <a href="#">手机</a>
-              <span>/</span>
-              <a href="#">运营商</a>
-              <span>/</span>
-              <a href="#">数码</a>
-              <div class="father">
-                <main-two></main-two>
-              </div>
-            </li>
-            <li>
-              <a href="#">电脑</a>
-              <span>/</span>
-              <a href="#">办公</a>
-              <div class="father">
-                <main-three></main-three>
-              </div>
-            </li>
-            <li>
-              <a href="#">家用电器</a>
-              <div class="father">
-                <main-one></main-one>
-              </div>
-            </li>
-            <li>
-              <a href="#">手机</a>
-              <span>/</span>
-              <a href="#">运营商</a>
-              <span>/</span>
-              <a href="#">数码</a>
-              <div class="father">
-                <main-two></main-two>
-              </div>
-            </li>
-            <li>
-              <a href="#">电脑</a>
-              <span>/</span>
-              <a href="#">办公</a>
-              <div class="father">
-                <main-three></main-three>
-              </div>
-            </li>
-            <li>
-              <a href="#">家用电器</a>
-              <div class="father">
-                <main-one></main-one>
-              </div>
-            </li>
-            <li>
-              <a href="#">手机</a>
-              <span>/</span>
-              <a href="#">运营商</a>
-              <span>/</span>
-              <a href="#">数码</a>
-              <div class="father">
-                <main-two></main-two>
-              </div>
-            </li>
-            <li>
-              <a href="#">电脑</a>
-              <span>/</span>
-              <a href="#">办公</a>
-              <div class="father">
-                <main-three></main-three>
-              </div>
-            </li>
-            <li>
-              <a href="#">家用电器</a>
-              <div class="father">
-                <main-one></main-one>
-              </div>
-            </li>
-            <li>
-              <a href="#">手机</a>
-              <span>/</span>
-              <a href="#">运营商</a>
-              <span>/</span>
-              <a href="#">数码</a>
-              <div class="father">
-                <main-two></main-two>
-              </div>
-            </li>
-            <li>
-              <a href="#">电脑</a>
-              <span>/</span>
-              <a href="#">办公</a>
-              <div class="father">
-                <main-three></main-three>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="sliderBig">
-          <el-carousel :interval="5000" height="470px" arrow="always">
-            <el-carousel-item v-for="item in list" :key="item.img">
-              <a href="#">
-                <img :src="item.img" />
-              </a>
-            </el-carousel-item>
-          </el-carousel>
-        </div>
+        <transition name="custom-zoom">
+          <div class="mainNav" v-if="number">
+            <div class="cover"></div>
+            <div class="cover2"></div>
+            <ul>
+              <li>
+                <a href="#">家用电器</a>
+                <div class="father">
+                  <main-one></main-one>
+                </div>
+              </li>
+              <li>
+                <a href="#">手机</a>
+                <span>/</span>
+                <a href="#">运营商</a>
+                <span>/</span>
+                <a href="#">数码</a>
+                <div class="father">
+                  <main-two></main-two>
+                </div>
+              </li>
+              <li>
+                <a href="#">电脑</a>
+                <span>/</span>
+                <a href="#">办公</a>
+                <div class="father">
+                  <main-three></main-three>
+                </div>
+              </li>
+              <li>
+                <a href="#">家用电器</a>
+                <div class="father">
+                  <main-one></main-one>
+                </div>
+              </li>
+              <li>
+                <a href="#">手机</a>
+                <span>/</span>
+                <a href="#">运营商</a>
+                <span>/</span>
+                <a href="#">数码</a>
+                <div class="father">
+                  <main-two></main-two>
+                </div>
+              </li>
+              <li>
+                <a href="#">电脑</a>
+                <span>/</span>
+                <a href="#">办公</a>
+                <div class="father">
+                  <main-three></main-three>
+                </div>
+              </li>
+              <li>
+                <a href="#">家用电器</a>
+                <div class="father">
+                  <main-one></main-one>
+                </div>
+              </li>
+              <li>
+                <a href="#">手机</a>
+                <span>/</span>
+                <a href="#">运营商</a>
+                <span>/</span>
+                <a href="#">数码</a>
+                <div class="father">
+                  <main-two></main-two>
+                </div>
+              </li>
+              <li>
+                <a href="#">电脑</a>
+                <span>/</span>
+                <a href="#">办公</a>
+                <div class="father">
+                  <main-three></main-three>
+                </div>
+              </li>
+              <li>
+                <a href="#">家用电器</a>
+                <div class="father">
+                  <main-one></main-one>
+                </div>
+              </li>
+              <li>
+                <a href="#">手机</a>
+                <span>/</span>
+                <a href="#">运营商</a>
+                <span>/</span>
+                <a href="#">数码</a>
+                <div class="father">
+                  <main-two></main-two>
+                </div>
+              </li>
+              <li>
+                <a href="#">电脑</a>
+                <span>/</span>
+                <a href="#">办公</a>
+                <div class="father">
+                  <main-three></main-three>
+                </div>
+              </li>
+              <li>
+                <a href="#">家用电器</a>
+                <div class="father">
+                  <main-one></main-one>
+                </div>
+              </li>
+              <li>
+                <a href="#">手机</a>
+                <span>/</span>
+                <a href="#">运营商</a>
+                <span>/</span>
+                <a href="#">数码</a>
+                <div class="father">
+                  <main-two></main-two>
+                </div>
+              </li>
+              <li>
+                <a href="#">电脑</a>
+                <span>/</span>
+                <a href="#">办公</a>
+                <div class="father">
+                  <main-three></main-three>
+                </div>
+              </li>
+              <li>
+                <a href="#">家用电器</a>
+                <div class="father">
+                  <main-one></main-one>
+                </div>
+              </li>
+              <li>
+                <a href="#">手机</a>
+                <span>/</span>
+                <a href="#">运营商</a>
+                <span>/</span>
+                <a href="#">数码</a>
+                <div class="father">
+                  <main-two></main-two>
+                </div>
+              </li>
+              <li>
+                <a href="#">电脑</a>
+                <span>/</span>
+                <a href="#">办公</a>
+                <div class="father">
+                  <main-three></main-three>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </transition>
+
+        <transition name="custom-zoom">
+          <div class="sliderBig" v-if="number">
+            <el-carousel :interval="5000" height="470px" arrow="always">
+              <el-carousel-item v-for="item in list" :key="item.img">
+                <a href="#">
+                  <img :src="item.img" />
+                </a>
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+        </transition>
       </div>
 
-      <div class="sliderSmall"></div>
       <div class="mainRight">
         <div class="user">
           <a href="#" class="avatar"></a>
@@ -279,6 +295,18 @@
           </div>
         </div>
       </div>
+      <div class="sliderSmall" @mouseenter="number = 1">
+        <a href="#" class="son1">
+
+        </a>
+        <a href="#" class="son2"></a>
+        <a href="#" class="son3"></a>
+        <el-carousel :interval="5000" height="470px" arrow="always">
+          <el-carousel-item v-for="item in rightSlider" :key="item.img">
+            <img :src="item.img" alt />
+          </el-carousel-item>
+        </el-carousel>
+      </div>
     </div>
   </div>
 </template>
@@ -287,6 +315,11 @@
 import mainOne from "./mainOne";
 import mainTwo from "./mainTwo";
 import mainThree from "./mainThree";
+
+import smallSlider1 from "../../assets/smallSlider1.jpg";
+import smallSlider2 from "../../assets/smallSlider2.jpg";
+import smallSlider3 from "../../assets/smallSlider3.jpg";
+
 import lbbig1 from "../../assets/lbbig1.jpg";
 import lbbig2 from "../../assets/lbbig2.jpg";
 import lbbig3 from "../../assets/lbbig3.jpg";
@@ -310,6 +343,7 @@ export default {
   components: { mainOne, mainTwo, mainThree },
   data() {
     return {
+      number: 1,
       list: [
         {
           img: lbbig1
@@ -336,22 +370,27 @@ export default {
           img: lbbig8
         }
       ],
-      listSmall: [
-        {
-          img1: s1,
-          img2: s4,
-          img3: s7
-        },
-        {
-          img1: s2,
-          img2: s5,
-          img3: s8
-        },
-        {
-          img1: s3,
-          img2: s4,
-          img3: s9
-        }
+      // listSmall: [
+      //   {
+      //     img1: s1,
+      //     img2: s4,
+      //     img3: s7
+      //   },
+      //   {
+      //     img1: s2,
+      //     img2: s5,
+      //     img3: s8
+      //   },
+      //   {
+      //     img1: s3,
+      //     img2: s4,
+      //     img3: s9
+      //   }
+      // ]
+      rightSlider: [
+        { img: smallSlider1 },
+        { img: smallSlider2 },
+        { img: smallSlider3 }
       ]
     };
   },
@@ -360,7 +399,61 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+.custom-zoom-enter-active,
+.custom-zoom-leave-active {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+
+.custom-zoom-enter,
+.custom-zoom-leave-active {
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
 .main {
+  .hider2 {
+    position: absolute;
+    width: 1000px;
+    height: 10px;
+    top: 0px;
+    left: 0px;
+    background-color: #f4f4f4;
+  }
+  .hider3 {
+    position: absolute;
+    width: 1000px;
+    height: 10px;
+    top: 480px;
+    left: 0px;
+    background-color: #f4f4f4;
+  }
+  .hider1 {
+    a {
+      display: inline-block;
+    }
+    position: absolute;
+    width: 1062px;
+    height: 470px;
+    top: 10px;
+    left: 0px;
+  }
+
   .w {
     .service {
       div {
@@ -544,16 +637,60 @@ export default {
       }
       width: 190px;
       height: 470px;
-      float: left;
+      float: right;
       margin-left: 10px;
       background-color: white;
     }
     .sliderSmall {
+      .son1:hover{
+        background-color: red;
+        opacity: 0.2;
+        cursor: pointer;
+      }
+      .son1{
+        position: absolute;
+        width: 190px;
+        height: 150px;
+        top: 0px;
+        left: 0px;
+        opacity: 0.0;
+        z-index:10000;
+      }
+      .son2:hover{
+        background-color: red;
+        opacity: 0.2;
+        cursor: pointer;
+      }
+      .son2{
+        position: absolute;
+        width: 190px;
+        height: 150px;
+        top: 160px;
+        left: 0px;
+        opacity: 0.0;
+        z-index:10000;
+      }
+      .son3:hover{
+        background-color: red;
+        opacity: 0.2;
+        cursor: pointer;
+      }
+      .son3{
+        position: absolute;
+        width: 190px;
+        height: 150px;
+        top: 320px;
+        left: 0px;
+        opacity: 0.0;
+        z-index:10000;
+      }
       width: 190px;
       height: 470px;
       float: left;
       margin-left: 10px;
       background-color: white;
+      float: right;
+      position: relative;
     }
     .sliderBig {
       width: 590px;
@@ -562,6 +699,20 @@ export default {
       margin-left: 10px;
     }
     .mainNav {
+      .cover {
+        position: absolute;
+        width: 10px;
+        height: 470px;
+        background-color: #f4f4f4;
+        left: 190px;
+      }
+      .cover2 {
+        position: absolute;
+        width: 10px;
+        height: 470px;
+        background-color: #f4f4f4;
+        left: 790px;
+      }
       ul {
         li:hover div {
           display: block;
@@ -617,5 +768,6 @@ export default {
   width: 100%;
   height: 480px;
   background-color: #f4f4f4;
+  position: relative;
 }
 </style>
