@@ -64,6 +64,9 @@ html {
 
 /* 此项目专项css */
 
+
+
+
 .el-carousel__button {
     width: 10px !important;
     height: 10px !important;
@@ -87,4 +90,8 @@ html {
 .el-carousel__arrow {
     border-radius: 45%;
     z-index: 999999999;
+}
+
+.msRight .el-carousel__arrow {
+    display: none;
 }
