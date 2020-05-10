@@ -431,7 +431,29 @@
           <img src="../../assets/smoothSlider.jpg" alt="#" />
         </div>
       </div>
-
+    </div>
+    <div class="mainPindao w">
+      <div class="pindaoT">
+        <img src="../../assets/pindao.jpg" alt="#" />
+      </div>
+      <div class="pindaoC">
+        <div class="pindaoCl">
+          <a href="#" class="pindao1"></a>
+          <a href="#" class="pindao2"></a>
+        </div>
+        <div class="pindaoCr">
+          <a href="#" class="pindao3"></a>
+          <a href="#" class="pindao4"></a>
+          <a href="#" class="pindao5"></a>
+          <a href="#" class="pindao6"></a>
+        </div>
+      </div>
+      <div class="pindaoB">
+        <a href="#" class="pindao7"></a>
+        <a href="#" class="pindao8"></a>
+        <a href="#" class="pindao9"></a>
+        <a href="#" class="pindao10"></a>
+      </div>
     </div>
   </div>
 </template>
@@ -1339,9 +1361,8 @@ export default {
       height: 10px;
     }
     .faxianR {
-
       .faxianWrap {
-        a:hover{
+        a:hover {
           opacity: 0.3;
         }
         .son1 {
@@ -1352,7 +1373,7 @@ export default {
           height: 260px;
           position: absolute;
           top: 0px;
-          left:0px
+          left: 0px;
         }
         .son2 {
           display: block;
@@ -1361,8 +1382,8 @@ export default {
           width: 200px;
           height: 260px;
           position: absolute;
-          top:0px;
-          left:200px;
+          top: 0px;
+          left: 200px;
         }
         .son3 {
           display: block;
@@ -1372,7 +1393,7 @@ export default {
           height: 260px;
           position: absolute;
           top: 0px;
-          left:400px
+          left: 400px;
         }
         .son4 {
           display: block;
@@ -1381,8 +1402,8 @@ export default {
           width: 200px;
           height: 260px;
           position: absolute;
-          top:0px;
-          left:600px;
+          top: 0px;
+          left: 600px;
         }
         .son5 {
           display: block;
@@ -1392,7 +1413,7 @@ export default {
           height: 260px;
           position: absolute;
           top: 0px;
-          left:800px
+          left: 800px;
         }
         .son6 {
           display: block;
@@ -1401,8 +1422,8 @@ export default {
           width: 200px;
           height: 260px;
           position: absolute;
-          top:0px;
-          left:1000px;
+          top: 0px;
+          left: 1000px;
         }
         .son7 {
           display: block;
@@ -1412,7 +1433,7 @@ export default {
           height: 260px;
           position: absolute;
           top: 0px;
-          left:1200px
+          left: 1200px;
         }
         .son8 {
           display: block;
@@ -1421,8 +1442,8 @@ export default {
           width: 200px;
           height: 260px;
           position: absolute;
-          top:0px;
-          left:1400px;
+          top: 0px;
+          left: 1400px;
         }
         .son7 {
           display: block;
@@ -1432,7 +1453,7 @@ export default {
           height: 260px;
           position: absolute;
           top: 0px;
-          left:1200px
+          left: 1200px;
         }
         .son8 {
           display: block;
@@ -1441,8 +1462,8 @@ export default {
           width: 200px;
           height: 260px;
           position: absolute;
-          top:0px;
-          left:1400px;
+          top: 0px;
+          left: 1400px;
         }
         .son9 {
           display: block;
@@ -1452,7 +1473,7 @@ export default {
           height: 260px;
           position: absolute;
           top: 0px;
-          left:1600px
+          left: 1600px;
         }
         .son10 {
           display: block;
@@ -1461,8 +1482,8 @@ export default {
           width: 200px;
           height: 260px;
           position: absolute;
-          top:0px;
-          left:1850px;
+          top: 0px;
+          left: 1850px;
         }
         .son11 {
           display: block;
@@ -1472,7 +1493,7 @@ export default {
           height: 260px;
           position: absolute;
           top: 0px;
-          left:2100px
+          left: 2100px;
         }
         .son12 {
           display: block;
@@ -1481,8 +1502,8 @@ export default {
           width: 200px;
           height: 260px;
           position: absolute;
-          top:0px;
-          left:2300px;
+          top: 0px;
+          left: 2300px;
         }
         .son13 {
           display: block;
@@ -1492,7 +1513,7 @@ export default {
           height: 260px;
           position: absolute;
           top: 0px;
-          left:2500px
+          left: 2500px;
         }
         .son14 {
           display: block;
@@ -1501,8 +1522,8 @@ export default {
           width: 200px;
           height: 260px;
           position: absolute;
-          top:0px;
-          left:2700px;
+          top: 0px;
+          left: 2700px;
         }
         .son15 {
           display: block;
@@ -1512,10 +1533,10 @@ export default {
           height: 260px;
           position: absolute;
           top: 0px;
-          left:2900px
+          left: 2900px;
         }
         width: 3096px;
-        height:260px;
+        height: 260px;
         position: relative;
       }
 
@@ -1537,7 +1558,6 @@ export default {
       }
       width: 190px;
       height: 260px;
-      background-color: pink;
       display: block;
       float: left;
       background: url("../../assets/faxian.jpg");
@@ -1546,9 +1566,114 @@ export default {
     position: relative;
     margin-top: 20px;
   }
+  .mainPindao {
+    a:hover {
+      opacity: 0.7;
+    }
+    .pindaoB {
+      .pindao7 {
+        flex: 1;
+        height: 180px;
+        margin-right: 10px;
+        background: url("../../assets/pindao7.jpg");
+      }
+      .pindao8 {
+        flex: 1;
+        height: 180px;
+        margin-right: 10px;
+        background: url("../../assets/pindao8.jpg");
+      }
+      .pindao9 {
+        flex: 1;
+        height: 180px;
+        margin-right: 10px;
+        background: url("../../assets/pindao9.jpg");
+      }
+      .pindao10 {
+        flex: 1;
+        height: 180px;
+        background: url("../../assets/pindao10.jpg");
+      }
+      display: flex;
+      width: 1190px;
+      height: 180px;
+      margin-top: 10px;
+    }
+    .pindaoC {
+      .pindaoCl {
+        .pindao1 {
+          flex: 1;
+          width: 290px;
+          margin-right: 10px;
+          background: url("../../assets/pindao1.jpg");
+        }
+        .pindao2 {
+          flex: 1;
+          width: 290px;
+          margin-right: 10px;
+          background: url("../../assets/pindao2.jpg");
+        }
+        display: flex;
+        flex: 1;
+        height: 370px;
+      }
+      .pindaoCr {
+        .pindao3 {
+          width: 290px;
+          height: 180px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          background: url("../../assets/pindao3.jpg");
+        }
+        .pindao4 {
+          width: 290px;
+          height: 180px;
+          margin-bottom: 10px;
+          background: url("../../assets/pindao4.jpg");
+        }
+        .pindao5 {
+          width: 290px;
+          height: 180px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          background: url("../../assets/pindao5.jpg");
+        }
+        .pindao6 {
+          width: 290px;
+          height: 180px;
+          margin-bottom: 10px;
+          background: url("../../assets/pindao6.jpg");
+        }
+        flex-wrap: wrap;
+        display: flex;
+        align-content: flex-start;
+        flex: 1;
+        height: 370px;
+      }
+      display: flex;
+      width: 1190px;
+      height: 370px;
+    }
+    .pindaoT {
+      img:hover {
+        cursor: text;
+      }
+      img {
+        width: 280px;
+        height: 85px;
+        display: block;
+      }
+      height: 85px;
+      width: 1190px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    height: 999px;
+    background-color: #f4f4f4;
+  }
 
   width: 100%;
-  height: 480px;
   background-color: #f4f4f4;
   position: relative;
 }
