@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="mainTop">
+    <div class="mainTop w">
       <div class="hider1" @mouseenter="number = 0">
         <a href="#">
           <img src="../../assets/backgroundL.jpg" alt="#" />
@@ -342,7 +342,7 @@
       </div>
     </div>
     <div class="mainTejia w">
-      <div class="tejia temB">
+      <div class="tejia">
         <div class="tejiaSon1" v-show="tejiaNum === 1">
           <a href="#" class="tejiaGrandson1"></a>
           <a href="#" class="tejiaGrandson2"></a>
@@ -392,7 +392,7 @@
           </div>
         </div>
       </div>
-      <div class="shangou temB">
+      <div class="shangou">
         <a href="#" class="shangouSon1"></a>
         <a href="#" class="shangouSon2"></a>
         <a href="#" class="shangouSon3"></a>
@@ -406,6 +406,32 @@
         <a href="#" class="sgr"></a>
         <div class="shangouR"></div>
       </div>
+    </div>
+    <div class="mainFaxian w">
+      <a href="#" class="faxianL">
+        <img src="../../assets/faxianSon.jpg" alt />
+      </a>
+      <div class="faxianR" id="fr" @mouseenter="enterFaxian" @mouseleave="leaveFaxian">
+        <div class="faxianWrap">
+          <a href="#" class="son1"></a>
+          <a href="#" class="son2"></a>
+          <a href="#" class="son3"></a>
+          <a href="#" class="son4"></a>
+          <a href="#" class="son5"></a>
+          <a href="#" class="son6"></a>
+          <a href="#" class="son7"></a>
+          <a href="#" class="son8"></a>
+          <a href="#" class="son9"></a>
+          <a href="#" class="son10"></a>
+          <a href="#" class="son11"></a>
+          <a href="#" class="son12"></a>
+          <a href="#" class="son13"></a>
+          <a href="#" class="son14"></a>
+          <a href="#" class="son15"></a>
+          <img src="../../assets/smoothSlider.jpg" alt="#" />
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -449,6 +475,7 @@ export default {
   components: { mainOne, mainTwo, mainThree },
   data() {
     return {
+      timer: undefined,
       tejiaNum: 1,
       mark: 0,
       minute: 35,
@@ -498,8 +525,25 @@ export default {
     };
   },
   methods: {
+    enterFaxian() {
+      clearInterval(this.timer);
+    },
+    leaveFaxian() {
+      this.moveSlider();
+    },
+    moveSlider() {
+      var step = 1;
+      var obj = document.getElementById("fr");
+
+      this.timer = setInterval(() => {
+        if (obj.scrollLeft < 2106) {
+          obj.scrollLeft += step;
+        } else {
+          obj.scrollLeft = 0;
+        }
+      }, 10);
+    },
     hello() {
-      console.log("hello mother fucker");
       setInterval(() => {
         if (this.second > 0) {
           this.second--;
@@ -517,6 +561,9 @@ export default {
   },
   created() {
     this.hello();
+  },
+  mounted() {
+    this.moveSlider();
   }
 };
 </script>
@@ -1267,6 +1314,236 @@ export default {
       position: relative;
     }
     height: 340px;
+    margin-top: 20px;
+  }
+  .mainFaxian {
+    .faxianR:hover {
+      overflow-x: scroll;
+    }
+
+    .faxianR::-webkit-scrollbar-track {
+      /*滚动条里面的轨道*/
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background: #ededed;
+    }
+
+    .faxianR::-webkit-scrollbar-thumb {
+      /*滚动条中的滚动块*/
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: #535353;
+    }
+
+    .faxianR::-webkit-scrollbar {
+      height: 10px;
+    }
+    .faxianR {
+
+      .faxianWrap {
+        a:hover{
+          opacity: 0.3;
+        }
+        .son1 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top: 0px;
+          left:0px
+        }
+        .son2 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top:0px;
+          left:200px;
+        }
+        .son3 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top: 0px;
+          left:400px
+        }
+        .son4 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top:0px;
+          left:600px;
+        }
+        .son5 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top: 0px;
+          left:800px
+        }
+        .son6 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top:0px;
+          left:1000px;
+        }
+        .son7 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top: 0px;
+          left:1200px
+        }
+        .son8 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top:0px;
+          left:1400px;
+        }
+        .son7 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top: 0px;
+          left:1200px
+        }
+        .son8 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top:0px;
+          left:1400px;
+        }
+        .son9 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top: 0px;
+          left:1600px
+        }
+        .son10 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top:0px;
+          left:1850px;
+        }
+        .son11 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top: 0px;
+          left:2100px
+        }
+        .son12 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top:0px;
+          left:2300px;
+        }
+        .son13 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top: 0px;
+          left:2500px
+        }
+        .son14 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top:0px;
+          left:2700px;
+        }
+        .son15 {
+          display: block;
+          background-color: white;
+          opacity: 0.01;
+          width: 200px;
+          height: 260px;
+          position: absolute;
+          top: 0px;
+          left:2900px
+        }
+        width: 3096px;
+        height:260px;
+        position: relative;
+      }
+
+      overflow-y: hidden;
+      overflow-x: hidden;
+      white-space: nowrap;
+      width: 990px;
+      height: 260px;
+      float: right;
+    }
+    .faxianL:hover img {
+      opacity: 1;
+    }
+    .faxianL {
+      img {
+        margin-left: 119px;
+        margin-top: 74px;
+        opacity: 0;
+      }
+      width: 190px;
+      height: 260px;
+      background-color: pink;
+      display: block;
+      float: left;
+      background: url("../../assets/faxian.jpg");
+    }
+    height: 260px;
+    position: relative;
     margin-top: 20px;
   }
 
