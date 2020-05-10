@@ -95,3 +95,7 @@ html {
 .msRight .el-carousel__arrow {
     display: none;
 }
+
+.msRight .el-carousel__indicators{
+    display: none;
+}

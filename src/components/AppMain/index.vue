@@ -341,6 +341,72 @@
         </el-carousel>
       </div>
     </div>
+    <div class="mainTejia w">
+      <div class="tejia temB">
+        <div class="tejiaSon1" v-show="tejiaNum === 1">
+          <a href="#" class="tejiaGrandson1"></a>
+          <a href="#" class="tejiaGrandson2"></a>
+          <a href="#" class="tejiaGrandson3"></a>
+          <a href="#" class="tejiaGrandson4"></a>
+          <a href="#" class="tejiaGrandson5"></a>
+        </div>
+        <div class="tejiaSon2" v-show="tejiaNum === 2">
+          <a href="#" class="tejiaGrandson1"></a>
+          <a href="#" class="tejiaGrandson2"></a>
+          <a href="#" class="tejiaGrandson3"></a>
+          <a href="#" class="tejiaGrandson4"></a>
+          <a href="#" class="tejiaGrandson5"></a>
+        </div>
+        <div class="tejiaSon3" v-show="tejiaNum === 3">
+          <a href="#" class="tejiaGrandson1"></a>
+          <a href="#" class="tejiaGrandson2"></a>
+          <a href="#" class="tejiaGrandson3"></a>
+          <a href="#" class="tejiaGrandson4"></a>
+          <a href="#" class="tejiaGrandson5"></a>
+        </div>
+        <div class="tejiaSon4" v-show="tejiaNum === 4">
+          <a href="#" class="tejiaGrandson1"></a>
+          <a href="#" class="tejiaGrandson2"></a>
+          <a href="#" class="tejiaGrandson3"></a>
+          <a href="#" class="tejiaGrandson4"></a>
+          <a href="#" class="tejiaGrandson5"></a>
+        </div>
+        <div class="tejiaSon5" v-show="tejiaNum === 5">
+          <a href="#" class="tejiaGrandson1"></a>
+          <a href="#" class="tejiaGrandson2"></a>
+          <a href="#" class="tejiaGrandson3"></a>
+          <a href="#" class="tejiaGrandson4"></a>
+          <a href="#" class="tejiaGrandson5"></a>
+        </div>
+        <div class="top">
+          <a href="#" class="mrtj">
+            每日特价
+            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+          </a>
+          <div class="title">
+            <a href="#" @mouseover="tejiaNum = 1">精选</a>
+            <a href="#" @mouseover="tejiaNum = 2">健康</a>
+            <a href="#" @mouseover="tejiaNum = 3">数码</a>
+            <a href="#" @mouseover="tejiaNum = 4">美食</a>
+            <a href="#" @mouseover="tejiaNum = 5">预告</a>
+          </div>
+        </div>
+      </div>
+      <div class="shangou temB">
+        <a href="#" class="shangouSon1"></a>
+        <a href="#" class="shangouSon2"></a>
+        <a href="#" class="shangouSon3"></a>
+        <a href="#" class="shangouSon4"></a>
+        <a href="#" class="shangouSon5"></a>
+        <a href="#" class="shangouSon6"></a>
+        <a href="#" class="ppsg">
+          品牌闪购
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="sgr"></a>
+        <div class="shangouR"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -383,6 +449,7 @@ export default {
   components: { mainOne, mainTwo, mainThree },
   data() {
     return {
+      tejiaNum: 1,
       mark: 0,
       minute: 35,
       second: 5,
@@ -824,7 +891,7 @@ export default {
   }
   .mainMs {
     .msRight {
-      .son:hover{
+      .son:hover {
         opacity: 0.05;
       }
       .son {
@@ -925,6 +992,282 @@ export default {
     }
     height: 260px;
     margin-top: 30px;
+  }
+  .mainTejia {
+    .tejia {
+      .tejiaGrandson3 {
+        position: absolute;
+        width: 171px;
+        height: 118px;
+        top: 3px;
+        left: 382px;
+        background-color: green;
+        opacity: 0.01;
+      }
+      .tejiaGrandson4 {
+        position: absolute;
+        width: 171px;
+        height: 118px;
+        top: 140px;
+        left: 191px;
+        background-color: green;
+        opacity: 0.01;
+      }
+      .tejiaGrandson5 {
+        position: absolute;
+        width: 171px;
+        height: 118px;
+        top: 140px;
+        left: 381px;
+        background-color: green;
+        opacity: 0.01;
+      }
+      .tejiaGrandson5:hover {
+        opacity: 0.1;
+      }
+      .tejiaGrandson4:hover {
+        opacity: 0.1;
+      }
+      .tejiaGrandson3:hover {
+        opacity: 0.1;
+      }
+      .tejiaGrandson2:hover {
+        opacity: 0.1;
+      }
+      .tejiaGrandson2 {
+        position: absolute;
+        width: 171px;
+        height: 118px;
+        top: 3px;
+        left: 191px;
+        background-color: green;
+        opacity: 0.01;
+      }
+      .tejiaGrandson1:hover {
+        opacity: 0.1;
+      }
+      .tejiaGrandson1 {
+        position: absolute;
+        width: 171px;
+        height: 266px;
+        top: 0px;
+        left: 1px;
+        background-color: green;
+        opacity: 0.01;
+      }
+      .tejiaSon1 {
+        display: block;
+        position: absolute;
+        width: 550px;
+        height: 270px;
+        top: 56px;
+        left: 20px;
+        background: url("../../assets/tj1.jpg");
+      }
+      .tejiaSon2 {
+        display: block;
+        position: absolute;
+        width: 550px;
+        height: 270px;
+        top: 56px;
+        left: 20px;
+        background: url("../../assets/tj2.jpg");
+      }
+      .tejiaSon3 {
+        display: block;
+        position: absolute;
+        width: 550px;
+        height: 270px;
+        top: 56px;
+        left: 20px;
+        background: url("../../assets/tj3.jpg");
+      }
+      .tejiaSon4 {
+        display: block;
+        position: absolute;
+        width: 550px;
+        height: 270px;
+        top: 56px;
+        left: 20px;
+        background: url("../../assets/tj4.jpg");
+      }
+      .tejiaSon5 {
+        display: block;
+        position: absolute;
+        width: 550px;
+        height: 270px;
+        top: 56px;
+        left: 20px;
+        background: url("../../assets/tj5.jpg");
+      }
+      .top {
+        .title {
+          a:hover {
+            color: red;
+            border-bottom: 2px solid red;
+          }
+          a {
+            display: inline-block;
+            width: 30px;
+            height: 21px;
+            font-size: 15px;
+            margin-right: 25px;
+            position: relative;
+          }
+          margin-top: 5px;
+          width: 275px;
+          height: 21px;
+          display: block;
+          float: right;
+        }
+        .mrtj:hover i {
+          color: red;
+        }
+        .mrtj {
+          i {
+            font-size: 20px;
+          }
+          font-size: 25px;
+          color: black;
+          font-weight: bold;
+        }
+
+        width: 590px;
+        top: 60px;
+        padding-left: 20px;
+        padding-top: 20px;
+      }
+      width: 590px;
+      height: 340px;
+      float: left;
+      margin-right: 10px;
+      display: block;
+      background-color: white;
+      position: relative;
+    }
+    .shangou {
+      .shangouSon1:hover {
+        opacity: 0.4;
+      }
+      .shangouSon2:hover {
+        opacity: 0.4;
+      }
+      .shangouSon3:hover {
+        opacity: 0.4;
+      }
+      .shangouSon4:hover {
+        opacity: 0.4;
+      }
+      .shangouSon5:hover {
+        opacity: 0.4;
+      }
+      .shangouSon6:hover {
+        opacity: 0.4;
+      }
+      .shangouSon1 {
+        z-index: 999;
+        width: 130px;
+        height: 103px;
+        background-color: white;
+        opacity: 0.01;
+        position: absolute;
+        top: 20px;
+        left: 303px;
+      }
+      .shangouSon2 {
+        z-index: 999;
+        width: 130px;
+        height: 103px;
+        background-color: white;
+        opacity: 0.01;
+        position: absolute;
+        top: 20px;
+        left: 433px;
+      }
+      .shangouSon3 {
+        z-index: 999;
+        width: 130px;
+        height: 103px;
+        background-color: white;
+        opacity: 0.01;
+        position: absolute;
+        top: 123px;
+        left: 303px;
+      }
+      .shangouSon4 {
+        z-index: 999;
+        width: 130px;
+        height: 103px;
+        background-color: white;
+        opacity: 0.01;
+        position: absolute;
+        top: 123px;
+        left: 433px;
+      }
+      .shangouSon5 {
+        z-index: 999;
+        width: 130px;
+        height: 103px;
+        background-color: white;
+        opacity: 0.01;
+        position: absolute;
+        top: 226px;
+        left: 303px;
+      }
+      .shangouSon6 {
+        z-index: 999;
+        width: 130px;
+        height: 103px;
+        background-color: white;
+        opacity: 0.01;
+        position: absolute;
+        top: 226px;
+        left: 433px;
+      }
+      .shangouR {
+        width: 260px;
+        height: 309px;
+        background: url("../../assets/sgrR.jpg");
+        background-size: 100% 100%;
+        position: absolute;
+        top: 20px;
+        left: 300px;
+      }
+      .sgr:hover {
+        opacity: 0.7;
+      }
+      .sgr {
+        width: 270px;
+        height: 265px;
+        display: block;
+        margin-top: 15px;
+        margin-left: 10px;
+        background: url("../../assets/sgr.jpg");
+        background-size: 100% 100%;
+      }
+      .ppsg:hover i {
+        color: red;
+      }
+      .ppsg {
+        i {
+          font-size: 20px;
+        }
+        font-size: 25px;
+        color: black;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-left: 20px;
+        display: inline-block;
+      }
+      width: 590px;
+      height: 340px;
+      float: left;
+      display: block;
+      background-color: white;
+      position: relative;
+    }
+    height: 340px;
+    margin-top: 20px;
   }
 
   width: 100%;
