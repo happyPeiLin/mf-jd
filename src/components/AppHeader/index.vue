@@ -8,7 +8,7 @@
       </div>
       <div class="center">
         <div class="searchBar">
-          <input type="text" value="" />
+          <input type="text" value />
           <a href="#">
             <i class="fa fa-camera-retro fa-1x"></i>
           </a>
@@ -124,8 +124,8 @@ export default {
     .searchBar {
       .navWords {
         li {
-          a:hover{
-            color:red
+          a:hover {
+            color: red;
           }
           a {
             font-size: 15px;
@@ -136,7 +136,7 @@ export default {
         position: absolute;
         top: 75px;
         left: -85px;
-        overflow:auto;
+        overflow: auto;
         width: 777px;
       }
       .hotWords {
@@ -204,7 +204,7 @@ export default {
       width: 550px;
       height: 36px;
       margin-left: 100px;
-      margin-top: 30px;
+      margin-bottom: 80px;
       border: 3px solid #e1251b;
       input {
         float: left;
@@ -222,13 +222,12 @@ export default {
     height: 100%;
     display: inline-block;
   }
-  .apple{
-    a{
+  .apple {
+    a {
       display: block;
       width: 100%;
-      height: 100%;
-      background-image: url('../../assets/apple.jpg');
-
+      height: 138px;
+      background-image: url("../../assets/apple.jpg");
     }
     display: inline-block;
     width: 190px;

@@ -309,6 +309,45 @@
       </div>
     </div>
     <div class="mainMs w">
+      <transition name="el-zoom-in-top">
+        <div class="windowTop" v-show="windowTop">
+          <div class="windowTopC w">
+            <a class="logo" href="#"></a>
+
+            <div class="searchBar">
+              <input type="text" value />
+              <a href="#">
+                <i class="fa fa-camera-retro fa-1x"></i>
+              </a>
+              <button>
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+              <div class="shopCart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span>
+                  <a href="#">我的购物车</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
+
+      <div class="msBar" id="msBar">
+        <a href="#">京东秒杀</a>
+        <div></div>
+        <a href="#" class="special">特色优选</a>
+        <div></div>
+        <a href="#">频道广场</a>
+        <div></div>
+        <a href="#">为你推荐</a>
+        <div></div>
+        <a href="#">客服</a>
+        <div></div>
+        <a href="#">反馈</a>
+        <div></div>
+        <a href="#">顶部</a>
+      </div>
       <a href="#" class="msLeft">
         <div class="title">京东秒杀</div>
         <div class="content">下场秒杀 倒计时</div>
@@ -497,6 +536,8 @@ export default {
   components: { mainOne, mainTwo, mainThree },
   data() {
     return {
+      windowTop: 0,
+      scrollTop: 1,
       timer: undefined,
       tejiaNum: 1,
       mark: 0,
@@ -547,6 +588,23 @@ export default {
     };
   },
   methods: {
+    test() {
+      setInterval(() => {
+        var scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > 670) {
+          this.windowTop = 1;
+          document.getElementById("msBar").style.position = "fixed";
+          document.getElementById("msBar").style.top = "120px";
+          document.getElementById("msBar").style.right = "120px";
+        } else {
+          this.windowTop = 0;
+          document.getElementById("msBar").style.position = "absolute";
+          document.getElementById("msBar").style.top = "0px";
+          document.getElementById("msBar").style.right = "-80px";
+        }
+      }, 100);
+    },
     enterFaxian() {
       clearInterval(this.timer);
     },
@@ -586,53 +644,64 @@ export default {
   },
   mounted() {
     this.moveSlider();
+    this.test();
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.custom-zoom-enter-active,
-.custom-zoom-leave-active {
-  opacity: 1;
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-  -webkit-transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-    -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-    -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-    opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-    opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-    -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  -webkit-transform-origin: right;
-  transform-origin: right;
+.test {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  top: 100px;
+  left: 100px;
 }
-
-.custom-zoom-enter,
-.custom-zoom-leave-active {
-  opacity: 0;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-}
-
 .main {
   .mainTop {
+    .custom-zoom-enter-active,
+    .custom-zoom-leave-active {
+      opacity: 1;
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      -webkit-transform-origin: right;
+      transform-origin: right;
+    }
+
+    .custom-zoom-enter,
+    .custom-zoom-leave-active {
+      opacity: 0;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+    }
     .hider2 {
       position: absolute;
       width: 1000px;
-      height: 10px;
-      top: 0px;
+      height: 30px;
+      top: -12px;
+      opacity: 0;
       left: 0px;
-      background-color: #f4f4f4;
+      background-color: black;
     }
     .hider3 {
       position: absolute;
       width: 1000px;
-      height: 10px;
+      height: 30px;
       top: 480px;
       left: 0px;
-      background-color: #f4f4f4;
+      background-color: black;
+      opacity: 0;
+      z-index: 10;
     }
     .hider1 {
       a {
@@ -959,6 +1028,129 @@ export default {
     }
   }
   .mainMs {
+    .windowTop {
+      .windowTopC {
+        .searchBar {
+          .shopCart:hover {
+            border: 1px solid red;
+          }
+          .shopCart {
+            span {
+              a {
+                color: red;
+              }
+              margin-left: 46px;
+              font-size: 12px;
+              margin-top: 3px;
+              display: inline-block;
+              font-weight: 700;
+            }
+            .fa-shopping-cart {
+              position: absolute;
+              top: 8px;
+              left: 20px;
+              color: red;
+            }
+            width: 132px;
+            height: 36px;
+            position: absolute;
+            right: -155px;
+            top: -3px;
+            border: 1px solid #e3e4e5;
+          }
+          button:hover {
+            background-color: #c81623;
+          }
+          button {
+            .fa-search {
+              color: white;
+            }
+            display: block;
+            float: left;
+            width: 10px;
+            height: 100%;
+            background-color: #e1251b;
+            outline: none;
+            border: none;
+            width: 48px;
+            margin-left: 20px;
+          }
+          a {
+            display: block;
+            float: left;
+            height: 100%;
+            line-height: 28px;
+          }
+          input {
+            float: left;
+            width: 460px;
+            height: 30px;
+            border: 1px solid transparent;
+            padding-left: 17px;
+            outline: none;
+            font-size: 12px;
+            color: grey;
+          }
+          top: 10px;
+          left: 290px;
+          position: absolute;
+          width: 550px;
+          height: 36px;
+          border: 3px solid #e1251b;
+        }
+        .logo {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          display: inline-block;
+          width: 142px;
+          height: 50px;
+          background: url("../../assets/toplogo.jpg");
+          background-size: 100% 100%;
+        }
+        height: 50px;
+        position: relative;
+      }
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      height: 52px;
+      width: 100%;
+      z-index: 999999999999;
+      border-bottom: 2px solid red;
+      background-color: white;
+    }
+    .msBar {
+      a:hover {
+        color: white;
+        background-color: red;
+      }
+      .special {
+        color: red;
+      }
+      div {
+        width: 40px;
+        height: 1px;
+        background-color: #dedede;
+        margin-left: 10px;
+      }
+      a {
+        color: #333333;
+        font-weight: 500;
+        padding: 10px;
+        padding: 15px 10px 10px 15px;
+        font-size: 14px;
+        width: 60px;
+        height: 60px;
+        display: block;
+      }
+      right: -80px;
+      top: 0px;
+      position: absolute;
+      width: 60px;
+      height: 420px;
+      background-color: white;
+    }
     .msRight {
       .son:hover {
         opacity: 0.05;
@@ -1059,6 +1251,7 @@ export default {
       background: url("../../assets/ms.jpg");
       background-size: 100% 100%;
     }
+    position: relative;
     height: 260px;
     margin-top: 30px;
   }
@@ -1669,7 +1862,7 @@ export default {
       align-items: center;
       display: flex;
     }
-    height: 999px;
+    height: 646px;
     background-color: #f4f4f4;
   }
 
