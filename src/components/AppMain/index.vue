@@ -168,7 +168,7 @@
 
           <transition name="custom-zoom">
             <div class="sliderBig" v-if="number">
-              <el-carousel :interval="5000" height="470px" arrow="always">
+              <el-carousel :interval="3000" height="470px" arrow="always">
                 <el-carousel-item v-for="item in list" :key="item.img">
                   <a href="#">
                     <img :src="item.img" />
@@ -300,7 +300,7 @@
           <a href="#" class="son1"></a>
           <a href="#" class="son2"></a>
           <a href="#" class="son3"></a>
-          <el-carousel :interval="5000" height="470px" arrow="always">
+          <el-carousel :interval="9000" height="470px" arrow="always">
             <el-carousel-item v-for="item in rightSlider" :key="item.img">
               <img :src="item.img" alt />
             </el-carousel-item>
@@ -342,11 +342,23 @@
         <div></div>
         <a href="#">为你推荐</a>
         <div></div>
-        <a href="#">客服</a>
+        <a href="#" style="padding:10px;padding-left:15px">
+          <i
+            class="fa fa-smile-o"
+            aria-hidden="true"
+            style="font-size:20px;padding-left:5px;display:block"
+          ></i>客服
+        </a>
         <div></div>
-        <a href="#">反馈</a>
+        <a href="#" style="padding:10px;padding-left:15px">
+          <i
+            class="fa fa-pencil-square-o"
+            aria-hidden="true"
+            style="font-size:20px;padding-left:5px;display:block"
+          ></i>反馈
+        </a>
         <div></div>
-        <a href="#">顶部</a>
+        <a href="#" class="toTop"  style="padding:10px;padding-left:15px;color:red;" ><i class="fa fa-arrow-up" aria-hidden="true" style="font-size:20px;padding-left:5px;display:block"></i>顶部</a>
       </div>
       <a href="#" class="msLeft">
         <div class="title">京东秒杀</div>
@@ -651,7 +663,7 @@ export default {
 
 <style lang="scss" scoped>
 .test {
-  background-color: green;
+  background-color: white;
   height: 100px;
   width: 100px;
   position: fixed;
@@ -1121,6 +1133,9 @@ export default {
       background-color: white;
     }
     .msBar {
+      .toTop:hover{
+        color:white !important;
+      }
       a:hover {
         color: white;
         background-color: red;
@@ -1263,7 +1278,7 @@ export default {
         height: 118px;
         top: 3px;
         left: 382px;
-        background-color: green;
+        background-color: white;
         opacity: 0.01;
       }
       .tejiaGrandson4 {
@@ -1272,7 +1287,7 @@ export default {
         height: 118px;
         top: 140px;
         left: 191px;
-        background-color: green;
+        background-color: white;
         opacity: 0.01;
       }
       .tejiaGrandson5 {
@@ -1281,20 +1296,20 @@ export default {
         height: 118px;
         top: 140px;
         left: 381px;
-        background-color: green;
+        background-color: white;
         opacity: 0.01;
       }
       .tejiaGrandson5:hover {
-        opacity: 0.1;
+        opacity: 0.5;
       }
       .tejiaGrandson4:hover {
-        opacity: 0.1;
+        opacity: 0.5;
       }
       .tejiaGrandson3:hover {
-        opacity: 0.1;
+        opacity: 0.5;
       }
       .tejiaGrandson2:hover {
-        opacity: 0.1;
+        opacity: 0.5;
       }
       .tejiaGrandson2 {
         position: absolute;
@@ -1302,11 +1317,11 @@ export default {
         height: 118px;
         top: 3px;
         left: 191px;
-        background-color: green;
+        background-color: white;
         opacity: 0.01;
       }
       .tejiaGrandson1:hover {
-        opacity: 0.1;
+        opacity: 0.5;
       }
       .tejiaGrandson1 {
         position: absolute;
@@ -1314,7 +1329,7 @@ export default {
         height: 266px;
         top: 0px;
         left: 1px;
-        background-color: green;
+        background-color: white;
         opacity: 0.01;
       }
       .tejiaSon1 {

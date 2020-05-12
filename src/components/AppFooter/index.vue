@@ -184,8 +184,8 @@ export default {
     background-color: #f4f4f4;
   }
   width: 100%;
-  height: 1000px;
+  height: 560px;
   background-color: #f4f4f4;
-  z-index: 9999999999;
+  z-index: 999;
 }
 </style>

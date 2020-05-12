@@ -8,7 +8,7 @@
       </div>
       <div class="center">
         <div class="searchBar">
-          <input type="text" value />
+          <input type="text" placeholder="男裤夏天 薄款" />
           <a href="#">
             <i class="fa fa-camera-retro fa-1x"></i>
           </a>
@@ -27,22 +27,28 @@
               <a style="color:red" href="#">口罩九折购</a>
             </li>
             <li>
-              <a href="#">口罩九折购</a>
+              <a href="#">职场C味</a>
             </li>
             <li>
-              <a href="#">口罩九折购</a>
+              <a href="#">吃货节</a>
             </li>
             <li>
-              <a href="#">口罩九折购</a>
+              <a href="#">美妆好礼</a>
             </li>
             <li>
-              <a href="#">口罩九折购</a>
+              <a href="#">魅族17</a>
             </li>
             <li>
-              <a href="#">口罩九折购</a>
+              <a href="#">上新季</a>
             </li>
             <li>
-              <a href="#">口罩九折购</a>
+              <a href="#">24期免息</a>
+            </li>
+            <li>
+              <a href="#">除草剂</a>
+            </li>
+            <li>
+              <a href="#">国潮运动</a>
             </li>
           </ul>
           <ul class="navWords">
@@ -122,6 +128,23 @@ export default {
   }
   .center {
     .searchBar {
+      input::-webkit-input-placeholder {
+        /*WebKit browsers*/
+
+        color: grey;
+      }
+
+      input::-moz-input-placeholder {
+        /*Mozilla Firefox*/
+
+        color: grey;
+      }
+
+      input::-ms-input-placeholder {
+        /*Internet Explorer*/
+
+        color: grey;
+      }
       .navWords {
         li {
           a:hover {
